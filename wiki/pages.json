@@ -10,7 +10,7 @@
                 "text": "Command blocks are only wrapped as peripherals if the enable_command_block option is true within the config."
             },
             {
-                "text": "This API is *not* the same as the [module!commands] API, which is exposed on command computers. @source projects/common/src/main/java/dan200/computercraft/shared/peripheral/commandblock/CommandBlockPeripheral.java:23 @module[kind=peripheral] command"
+                "text": "This API is *not* the same as the [module!commands] API, which is exposed on command computers."
             }
         ],
         "summaryColor": "#FFADB8CC",
@@ -123,7 +123,7 @@
                 "text": "A computer or turtle wrapped as a peripheral."
             },
             {
-                "text": "This allows for basic interaction with adjacent computers. Computers wrapped as peripherals will have the type computer while turtles will be turtle. @source projects/common/src/main/java/dan200/computercraft/shared/computer/blocks/ComputerPeripheral.java:20 @module[kind=peripheral] computer"
+                "text": "This allows for basic interaction with adjacent computers. Computers wrapped as peripherals will have the type computer while turtles will be turtle."
             }
         ],
         "summaryColor": "#FFADB8CC",
@@ -429,7 +429,7 @@
                 "text": "You can see which mount a path belongs to with the [getDrive] function. This returns \"hdd\" for the computer's main filesystem (\"/\"), \"rom\" for the rom (\"rom/\")."
             },
             {
-                "text": "Most filesystems have a limited capacity, operations which would cause that capacity to be reached (such as writing an incredibly large file) will fail. You can see a mount's capacity with [getCapacity] and the remaining space with [getFreeSpace]. @source projects/core/src/main/java/dan200/computercraft/core/apis/FSAPI.java:57 @module[kind=module] fs"
+                "text": "Most filesystems have a limited capacity, operations which would cause that capacity to be reached (such as writing an incredibly large file) will fail. You can see a mount's capacity with [getCapacity] and the remaining space with [getFreeSpace]."
             }
         ],
         "summaryColor": "#FFADB8CC",
@@ -1117,7 +1117,7 @@
         "titleColor": "#FFE2E8F4",
         "summary": [
             {
-                "text": "The [module!os] API allows interacting with the current computer. @source projects/core/src/main/java/dan200/computercraft/core/apis/OSAPI.java:30 @module[kind=module] os"
+                "text": "The [module!os] API allows interacting with the current computer."
             }
         ],
         "summaryColor": "#FFADB8CC",
@@ -1510,19 +1510,7 @@
                 "text": "Whenever a redstone input changes, a [event!redstone] event will be fired. This may be used instead of repeativly polling."
             },
             {
-                "text": "This module may also be referred to as rs. For example, one may call rs.getSides() instead of [getSides]. @usage Toggle the redstone signal above the computer every 0.5 seconds."
-            },
-            {
-                "text": "``lua while true do redstone.setOutput(\"top\", not redstone.getOutput(\"top\")) sleep(0.5) end ` @usage Mimic a redstone comparator in subtraction mode."
-            },
-            {
-                "text": "`lua while true do local rear = rs.getAnalogueInput(\"back\") local sides = math.max(rs.getAnalogueInput(\"left\"), rs.getAnalogueInput(\"right\")) rs.setAnalogueOutput(\"front\", math.max(rear - sides, 0))"
-            },
-            {
-                "text": "os.pullEvent(\"redstone\") -- Wait for a change to inputs. end ``"
-            },
-            {
-                "text": "[comparator]: https://minecraft.wiki/w/Redstone_Comparator#Subtract_signal_strength \"Redstone Comparator on the Minecraft wiki.\" @source projects/core/src/main/java/dan200/computercraft/core/apis/RedstoneAPI.java:56 @module[kind=module] redstone"
+                "text": "This module may also be referred to as rs. For example, one may call rs.getSides() instead of [getSides]."
             }
         ],
         "summaryColor": "#FFADB8CC",
@@ -1897,7 +1885,7 @@
                 "text": "These functions accept any of the constants from the [colors] API. Combinations of colours may be accepted, but will only display a single colour (typically following the behaviour of [colors.toBlit])."
             },
             {
-                "text": "The [paintutils] API provides several helpful functions for displaying graphics using [term.setBackgroundColour`]. @source projects/core/src/main/java/dan200/computercraft/core/apis/TermAPI.java:67 @module[kind=module] term"
+                "text": "The [paintutils] API provides several helpful functions for displaying graphics using [term.setBackgroundColour`]."
             }
         ],
         "summaryColor": "#FFADB8CC",
